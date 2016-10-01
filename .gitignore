@@ -4,3 +4,7 @@
 # General CodeKit files to ignore
 config.codekit
 /min
+
+### Sass ###
+.sass-cache/
+*.css.map
