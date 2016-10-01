@@ -1,0 +1,11 @@
+/*navbar and footer */
+/* navbar */
+.navbar {
+  position: fixed;
+  min-height: 50px;
+  margin-bottom: 0px;
+  border: none; }
+
+.navbar-default {
+  background-color: none;
+  border-color: none; }

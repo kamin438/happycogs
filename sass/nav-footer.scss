@@ -1,0 +1,27 @@
+/*navbar and footer */
+
+/* navbar */
+.navbar-default {
+  background-color: rgba(248, 248, 248, 0) !important;
+  border-color: none !important;
+}
+
+.navbar {
+  position: relative;
+  min-height: 50px;
+  margin-bottom: 15px;
+  border: none;
+
+  @media (min-width: 768px){
+    border-radius: none !important;
+  }
+}
+
+.navbar-header {
+    width: 100%;
+}
+
+.navbar-nav {
+    float: right;
+    margin: 0;
+}
