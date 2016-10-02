@@ -1,23 +1,27 @@
 /* homepage style */
-/* home hero */
+/* home hero footer - subcribe */
 #block-views-block-frontpage-home-hero .view-footer {
   position: inherit;
   bottom: 155px;
   z-index: 99; }
+  @media screen and (max-width: 425px) {
+    #block-views-block-frontpage-home-hero .view-footer {
+      bottom: 100px; } }
 #block-views-block-frontpage-home-hero #mc_embed_signup {
   background: none !important;
   clear: left;
   font: 14px Helvetica,Arial,sans-serif;
-  width: 100%; }
+  width: 100%;
+  padding: 0 20px; }
 #block-views-block-frontpage-home-hero #mc_embed_signup .button {
   background-color: rgba(158, 158, 158, 0) !important;
   border: 1px solid #2196F3 !important; }
   #block-views-block-frontpage-home-hero #mc_embed_signup .button:hover {
     background-color: #2196F3 !important; }
 
+/* Hero Image and text */
 .article-window-header {
   max-height: 450px;
-  min-height: 380px;
   display: block;
   position: relative;
   overflow: hidden !important;
@@ -62,6 +66,7 @@
   left: 0px;
   right: 0px;
   top: 0px;
+  padding: 0 10px;
   color: white;
   z-index: 99;
   width: 100%;
@@ -71,11 +76,36 @@
   .article-window-header-text h1 {
     font-size: 80px;
     font-weight: bold;
-    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4); }
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
+    transition: opacity 1s ease-in-out 0s; }
   .article-window-header-text h3 {
     font-size: 30px;
     line-height: 34px;
-    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4); }
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
+    transition: opacity 1s ease-in-out 0s; }
+  @media screen and (max-width: 768px) {
+    .article-window-header-text {
+      margin-top: 30px; }
+      .article-window-header-text h1 {
+        font-size: 40px; }
+      .article-window-header-text h3 {
+        font-size: 25px; } }
+  @media screen and (max-width: 425px) {
+    .article-window-header-text {
+      margin-top: 10px; }
+      .article-window-header-text h1 {
+        font-size: 30px; }
+      .article-window-header-text h3 {
+        font-size: 18px; } }
+
+/* discover area */
+.view-display-id-discover .view-content {
+  width: 100%;
+  position: relative;
+  text-align: center; }
+.view-display-id-discover .gridslot {
+  display: inline-block;
+  margin: 12px; }
 
 /* flip preivew cards */
 .container-effect {
@@ -120,9 +150,13 @@
     overflow: hidden; }
     .container-effect .preview-front .front-text {
       position: absolute;
-      bottom: 45%;
-      right: 0;
-      left: 0;
+      top: 50%;
+      margin-top: -50%;
+      width: 250px;
+      height: 250px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
       backface-visibility: hidden; }
       .container-effect .preview-front .front-text h3 {
         color: #fff;
@@ -136,11 +170,14 @@
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.05); }
     .container-effect .preview-back .text-back {
       position: absolute;
-      padding: 10px;
-      top: 20px;
-      right: 0;
-      left: 0;
-      backface-visibility: hidden; }
+      top: 50%;
+      margin-top: -50%;
+      width: 250px;
+      height: 250px;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column; }
       .container-effect .preview-back .text-back:hover {
         text-decoration: underline; }
       .container-effect .preview-back .text-back p {
